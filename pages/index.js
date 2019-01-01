@@ -2,10 +2,10 @@ import React from "react";
 import Link from "next/link";
 import Head from "../components/head";
 import Nav from "../components/nav";
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
+import { createStore } from "redux";
+import { Provider } from "react-redux";
 
-import reducer from '../redux/reducer';
+import reducer from "../redux/reducer";
 
 const store = createStore(reducer);
 
