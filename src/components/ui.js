@@ -13,3 +13,30 @@ export class MenuBar extends Component {
     );
   }
 }
+
+export class NumberButton extends Component {
+  render() {
+    return (
+      <div>
+        <button>n</button>
+      </div>
+    );
+  }
+}
+
+export class RoomNumberInput extends Component {
+  render() {
+    return (
+      <div className="row">
+        <div className="input-field col s12">
+          <input
+            type="text"
+            value={null}
+            onChange={null}
+          />
+          <label for="title">部屋番号</label>
+        </div>
+      </div>
+    );
+  }
+}
