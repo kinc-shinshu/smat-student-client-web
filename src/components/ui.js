@@ -6,7 +6,9 @@ export class MenuBar extends Component {
   render() {
     return (
       <div>
-        <div className="nav-wrapper container" />
+        <div className="nav-wrapper container">
+          <p>ハゲるぞ</p>
+        </div>
       </div>
     );
   }
