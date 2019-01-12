@@ -1,5 +1,5 @@
 import React from "react";
-import Enzyme, { shallow } from "enzyme";
+import Enzyme, { shallow, mount } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import { NumberButton, RoomNumberInput, MenuBar } from "../components/ui";
 import { Entrance } from "../pages/entrance";
@@ -23,4 +23,14 @@ describe("view", () => {
 
 describe("logic", () => {
   // ぜんぜんわからん
+  it("unappropriate input to room id", () => {
+    const wrapper = mount(<Entrance />);
+    wrapper
+      .find("input#roomId")
+      .first()
+      .simulate("change", { target: { value: "111" } });
+    expect(wrapper.find("div#roomId-error").text()).toBe(
+      "部屋番号を入力してください。"
+    );
+  });
 });
