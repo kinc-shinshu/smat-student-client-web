@@ -11,10 +11,6 @@ describe("view", () => {
     const wrapper = shallow(<Entrance />);
     expect(wrapper.find("MenuBar").length).toBe(1);
   });
-  it("renders 10 number input buttons", () => {
-    const wrapper = shallow(<Entrance />);
-    expect(wrapper.find("NumberButton").length).toBe(10);
-  });
   it("renders 1 room number input bar", () => {
     const wrapper = shallow(<Entrance />);
     expect(wrapper.find("RoomNumberInput").length).toBe(1);
@@ -22,6 +18,10 @@ describe("view", () => {
   it("renders 1 number pad", () => {
     const wrapper = shallow(<Entrance />);
     expect(wrapper.find("NumberPad").length).toBe(1);
+  });
+  it("renders 10 number input buttons", () => {
+    const wrapper = shallow(<NumberPad />);
+    expect(wrapper.find("div.button").length).toBe(10);
   });
 });
 
