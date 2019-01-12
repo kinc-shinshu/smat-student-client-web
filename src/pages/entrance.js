@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { MenuBar, RoomNumberInput, NumberButton } from "../components/ui";
+import { MenuBar, RoomNumberInput, NumberPad } from "../components/ui";
 
 export class Entrance extends Component {
   render() {
@@ -9,7 +9,7 @@ export class Entrance extends Component {
       <div>
         <MenuBar />
         <RoomNumberInput />
-        {buttons}
+        <NumberPad />
       </div>
     );
   }

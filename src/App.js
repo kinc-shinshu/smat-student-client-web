@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import { MenuBar, RoomNumberInput } from "./components/ui";
+import { MenuBar, RoomNumberInput, NumberPad } from "./components/ui";
 
 class App extends Component {
   render() {
@@ -9,6 +9,7 @@ class App extends Component {
       <div className="App">
         <MenuBar />
         <RoomNumberInput />
+        <NumberPad />
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
