@@ -1,7 +1,7 @@
 import React from "react";
 import Enzyme, { shallow, mount } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
-import { NumberButton, RoomNumberInput, MenuBar } from "../components/ui";
+import { NumberButton, RoomNumberInput, MenuBar, NumberPad } from "../components/ui";
 import { Entrance } from "../pages/entrance";
 
 Enzyme.configure({ adapter: new Adapter() });
@@ -18,6 +18,10 @@ describe("view", () => {
   it("renders 1 room number input bar", () => {
     const wrapper = shallow(<Entrance />);
     expect(wrapper.find("RoomNumberInput").length).toBe(1);
+  });
+  it("renders 1 number pad", () => {
+    const wrapper = shallow(<Entrance />);
+    expect(wrapper.find("NumberPad").length).toBe(1);
   });
 });
 

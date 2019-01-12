@@ -1,11 +1,12 @@
 import React, { Component } from "react";
-import { MenuBar } from "../components/ui";
+import { MenuBar, NumberPad } from "../components/ui";
 
 export class Entrance extends Component {
   render() {
     return (
       <div>
         <MenuBar />
+        <NumberPad />
       </div>
     );
   }

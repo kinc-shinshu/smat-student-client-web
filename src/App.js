@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import { MenuBar } from "./components/ui";
+import { MenuBar, NumberPad } from "./components/ui";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <MenuBar />
+        <NumberPad />
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
