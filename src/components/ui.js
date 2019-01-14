@@ -36,9 +36,9 @@ export class NumberPad extends Component {
 export class RoomNumberInput extends Component {
   render() {
     return (
-      <div class="input-field">
+      <div className="input-field">
         <input type="text" />
-        <label for="first_name">部屋番号</label>
+        <label htmlFor="first_name">部屋番号</label>
       </div>
     );
   }
