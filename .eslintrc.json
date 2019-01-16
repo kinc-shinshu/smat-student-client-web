@@ -23,6 +23,7 @@
     "react/jsx-uses-vars": 1,
     "no-console": "warn",
     "jsx-a11y/href-no-hash": "off",
-    "jsx-a11y/anchor-is-valid": "off"
+    "jsx-a11y/anchor-is-valid": "off",
+    "no-unused-vars": "warn"
   }
 }

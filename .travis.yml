@@ -1,34 +1,14 @@
-# Node's project template example
-# language: node_js
-# node_js:
-#   - "node"
-#   - "lts/*"
-#
-# before_script:
-#   - npm i
-#
-# script:
-#   - npm run test
-#
-# branches:
-#   only:
-#     - master
+language: node_js
+node_js:
+  - "node"
+  - "lts/*"
 
-# Ruby's project template example
-# language: ruby
-# rvm:
-#   - 2.5.1
-#   - 2.5.1-p57
-#
-# cache: bundler
-#
-# before_install:
-#   - gem update --system
-#
-# script:
-#   - bundle exec rails db:setup
-#   - bundle exec rspec
-#
-# branches:
-#   only:
-#     - master
+before_script:
+  - npm i
+
+script:
+  - npm run lint
+
+branches:
+  only:
+    - master
