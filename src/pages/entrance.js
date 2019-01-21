@@ -18,6 +18,9 @@ export class Entrance extends Component {
   }
 
   render() {
+    if (this.state.roomId.length === 3) {
+      this.props.history.push("/questions");
+    }
     return (
       <div className="App">
         <MenuBar />
