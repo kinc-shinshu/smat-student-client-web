@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import { Consumer } from "../pages/entrance";
 import "materialize-css";
 import "materialize-css/dist/css/materialize.min.css";
@@ -32,10 +33,9 @@ export class NumberPad extends Component {
           {({ setRoomId, deleteRoomId }) => {
             const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
             const buttons = numbers.map((k, i) => (
-              <div className="col s4">
+              <div className="col s4" key={i}>
                 <div
                   className="button"
-                  key={i}
                   style={buttonStyle}
                   onClick={() => {
                     setRoomId(k);
@@ -72,9 +72,17 @@ export class RoomNumberInput extends Component {
   render() {
     return (
       <div className="input-field">
-        <input type="text" value={this.props.value} />
+        <input type="text" defaultValue={this.props.roomId} />
         <label htmlFor="first_name">部屋番号</label>
       </div>
     );
   }
 }
+
+RoomNumberInput.propTypes = {
+  roomId: PropTypes.string
+};
+
+RoomNumberInput.defaultProps = {
+  roomId: ""
+};

@@ -21,7 +21,7 @@ export class Entrance extends Component {
     return (
       <div className="App">
         <MenuBar />
-        <RoomNumberInput value={this.state.roomId} />
+        <RoomNumberInput roomId={this.state.roomId} />
         <Provider value={this.state}>
           <NumberPad />
         </Provider>
